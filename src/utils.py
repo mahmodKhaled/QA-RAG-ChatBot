@@ -40,3 +40,22 @@ def post_process_llm_response(
     llm_response = llm_response.strip()
 
     return llm_response
+
+def preprocess_path(file_path):
+    """
+    Preprocesses the file path by removing the file name and converting
+    the path separators to a platform-independent format.
+    
+    Args:
+        file_path (str): The full path to the file.
+    
+    Returns:
+        str: The processed folder path.
+    """
+    # Get the directory (i.e., remove the file name) from the file path
+    folder_path = os.path.dirname(file_path)
+    
+    # Convert the path to Unix-style forward slashes (if needed)
+    processed_path = folder_path.replace("\\", "/")
+    
+    return processed_path
