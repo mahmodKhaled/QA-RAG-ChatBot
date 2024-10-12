@@ -1,9 +1,9 @@
-from config import CFG
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.document_loaders import PyPDFLoader, DirectoryLoader
 from langchain.embeddings import HuggingFaceInstructEmbeddings
 from langchain.vectorstores import Chroma
-from utils import get_path_to_file
+from src.config import CFG
+from src.utils import get_path_to_file
 from typing import List
 
 def load_pdf_files(

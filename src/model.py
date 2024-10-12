@@ -1,4 +1,3 @@
-from config import CFG
 from transformers import (
     AutoTokenizer,
     AutoModelForCausalLM,
@@ -6,6 +5,7 @@ from transformers import (
 from typing import Tuple
 from transformers import pipeline
 from langchain.llms import HuggingFacePipeline
+from src.config import CFG
 
 def load_model(
     model_name: str= CFG.model_name
