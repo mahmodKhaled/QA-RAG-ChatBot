@@ -129,7 +129,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-QA_env/
+qa_env/
 
 # Spyder project settings
 .spyderproject
